@@ -6,6 +6,7 @@
     <h1>Detalhes do post {{ $post->title }}</h1>
 
     <ul>
+        <li><img src="{{ url("storage/{$post->image}")}}" alt="{{ $post->title }}" width="80px"></li>
         <li>{{ $post->title }}</li>
         <li>{{ $post->content }}</li>
     </ul>
