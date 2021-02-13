@@ -1,6 +1,12 @@
-<h1>Editar o post <strong>{{ $post->title }}</strong></h1>
+@extends('admin.layouts.app')
 
-<form action="{{ route('posts.update', $post->id) }}" method="POST">
-    @method('put')
-    @include('admin.posts.partials.form')
-</form>
+@section('title', 'Editando o post')
+
+@section('content')
+    <h1>Editar o post <strong>{{ $post->title }}</strong></h1>
+
+    <form action="{{ route('posts.update', $post->id) }}" method="POST">
+        @method('put')
+        @include('admin.posts.partials.form')
+    </form>
+@endsection
